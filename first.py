@@ -22,7 +22,7 @@ class Perceptron:
         return vals
 
     def sign_filter(self,n):
-        if n >=0:
+        if n >0:
             return 1
         else:
             return 0

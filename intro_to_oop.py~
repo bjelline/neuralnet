@@ -1,0 +1,14 @@
+def Car:
+    def __init__(self,color):
+        self.color = color
+    
+    def what_is_color(self):
+        return self.color
+    
+    def new_color(self,new_color):
+        self.color = new_color
+
+volvo = Car("brown")
+print volvo.what_is_color()
+volvo.new_color("blue")
+print volvo.what_is_color()
