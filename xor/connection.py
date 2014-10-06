@@ -22,7 +22,7 @@ class Connection:
         self.weight += deltaWeight
 
     def weight_gen(self,n):
-        return self.weight_range[random.randint(0,len(self.weight_range)-1)])
+        return self.weight_range[random.randint(0,len(self.weight_range)-1)]
         
 
     def prange(self,start,stop,step):

@@ -1,0 +1,10 @@
+from network import Network
+count = 0
+theta = 0.0
+inputs = []
+
+def setup():
+    nn = Network(2,4)
+    inputs.append([1,0])
+    
+    

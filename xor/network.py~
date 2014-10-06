@@ -1,0 +1,33 @@
+from connection import Connection
+from neuron import Neuron
+class Network:
+    def __init__(self,inputs, hiddentotal):
+        self.learning_constant = 0.5
+        
+        self.InputNeurons = []
+        for i in xrange(inputs): 
+            self.InputNeuron.append(Neuron())
+        self.InputNeuron.append(Neuron(1)) #adding bias neuron
+        self.HiddenNeurons = []
+        for i in xrange(hiddentotal):
+            self.HiddenNeuron.append(Neuron())
+        self.HiddenNeuron.append(Neuron(1)) #adding bias neuron
+
+        self.OutputNeuron = Neuron()
+        
+        #connecting everything
+        for ind_in,val_in in enumerate(self.InputNeuron):
+            for ind_hid,val_hid in enumerate(self.HiddenNeuron):
+                c = Connection(val_in,val_hid)
+                self.InputNeuron[ind_in].addConnection(c)
+                self.HiddenNeuron[ind_hid].addConnection(c)
+
+        for ind,val in enumerate(self.HiddenNeuron):
+            c = Connection(val,self.OutputNeuron)
+            self.HiddenNeuron[ind].addConnection(c)
+            self.OutputNeuron.addConnection(c)
+
+    def feedForward(self,inputVals):
+        for ind,val in enumerate(inputVals):
+            self.InputNeuron
+

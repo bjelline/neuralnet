@@ -28,6 +28,9 @@ class Neuron:
         c = Connection(conn)
         self.connections.append(c)
 
+    def set_input(self,val):
+        self.ouput = val
+
     def getOuput(self):
         return repr(output)
 
