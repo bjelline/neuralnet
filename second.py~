@@ -1,0 +1,44 @@
+import math
+
+class Vector:
+    def __init__(self,vect):
+        self.vect = vect
+
+    def add(self,other):
+        for ind,val in enumerate(other):
+            self.vect[ind] = self.vect[ind] + val
+        
+
+
+class Vehicle:
+    def __init__(self,n,x,y):
+        brain = Perceptron(n,0.001)
+        self.location = [x,y]
+        self.velocity = [0,0]
+        self.acceleration = [0,0]
+        self.maxforce = 0.1
+        self.maxspeed = 4
+    
+    def update():
+        
+
+    def add(self,first,second):
+        summa = 0
+        for ind,val in enumerate(first):
+            summa += second[ind] + val
+        return summa
+    
+    def scalar_mult(self,n,vector):
+        
+
+    def limit(self,vector,limit):
+        if self.magnitude(vector) > limit:
+            self
+        
+    def magnitude(self,vector):
+        summa = 0
+        for elem in vector:
+            summa += (elem**2)
+        return math.sqrt(summa)
+        
+    
