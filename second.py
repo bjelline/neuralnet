@@ -16,5 +16,12 @@ class Vehicle:
 
     def applyForce(self, force):
         acceleration.add(force)
-       
-    
+        
+    #expects an array
+    def steer(self, targets):
+        if isinstance(targets,Vector):
+            forces = 
+        elif isinstance(targets,[]):
+            targets = Vector(targets)
+        
+        
