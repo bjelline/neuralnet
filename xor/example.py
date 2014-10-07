@@ -27,7 +27,7 @@ for i in xrange(5):
         known = 1
         if (pick[0] == 1 and pick[1] == 1) or (pick[0] == 0 and pick[1] == 0): known = 0
         result = nn.feedForward(pick)
-        mse += (result - known)*(result-known)
+        mse += (result - known)*(result-known)#? - -
 
         rmse = math.sqrt(mse/4)
         print "Root mean squared error: ", rmse

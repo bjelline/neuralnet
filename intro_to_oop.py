@@ -1,4 +1,8 @@
-def Car:
+class Vehicle:
+    def __init__(self,color):
+        self.color = color
+
+class Car(Vehicle):
     #Use __init__ to initialize variables that will be used elsewhere in the class
     #self references the object name, which is assigned at run time
     def __init__(self,color):  
@@ -11,7 +15,7 @@ def Car:
         self.color = new_color
 
 volvo = Car("brown") #in this case self refers to volvo
-print volvo.what_is_color()
+print volvo.what_is_color() # == what_is_color(volvo)
 volvo.new_color("blue")
 print volvo.what_is_color()
 accura = Car("grey") #here we provide a different variable name for the class.

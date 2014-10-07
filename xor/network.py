@@ -1,5 +1,3 @@
-from connection import Connection
-from neuron import Neuron
 class Network:
     def __init__(self,inputs, hiddentotal):
         self.learning_constant = 0.5
@@ -31,6 +29,11 @@ class Network:
         for ind,val in enumerate(inputVals):
             self.InputNeurons[ind].set_input(val)
 
+        #add something that sets the output for the hidden neurons
+        #this will fix the bug
+        for ind,val in enumerate(self.InputNeurons):
+            self.HiddenNeurons[ind].set_input(self.InputNeurons[ind].calcOutput())
+       
         for ind,val in enumerate(self.HiddenNeurons):
             self.HiddenNeurons[ind].calcOutput()
 
@@ -71,3 +74,5 @@ class Network:
         return result
                     
         
+from connection import Connection
+from neuron import Neuron

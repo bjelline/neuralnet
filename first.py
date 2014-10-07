@@ -21,6 +21,7 @@ class Perceptron:
             r += step
         return vals
 
+    #activation function
     def sign_filter(self,n):
         if n >0:
             return 1
@@ -30,7 +31,7 @@ class Perceptron:
     def feedforward(self,inputs):
         summa = 0
         for ind,val in enumerate(inputs):
-            summa += self.weights[ind]+val
+            summa += self.weights[ind]*val
         return self.sign_filter(summa)
     
     def train(self,inputs,desired):
@@ -56,7 +57,7 @@ p.train(training[index][:3],training[index][3])
 for ind,val in enumerate(training):
     guess = p.feedforward(val[:3])
     if guess == 0:
-        print "less than"
+        print "less than"0
     else:
         print "greater than"
 
