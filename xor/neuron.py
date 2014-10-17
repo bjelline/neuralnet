@@ -10,6 +10,9 @@ class Neuron:
             self.connections = []
             self.bias = True
 
+    def __str__(self):
+        return repr(self.output)
+    
     def calcOutput(self):
         if self.bias:
             summa = 0
@@ -19,7 +22,8 @@ class Neuron:
         for c in self.connections:
             from_n = c.getFrom()
             to_n = c.getTo()
-        
+            print c.getWeight()
+            print from_n.getOutput()
             summa += from_n.getOutput()*c.getWeight()
         self.output = self.f(self.bias+summa)
 
@@ -31,7 +35,7 @@ class Neuron:
         self.ouput = val
 
     def getOutput(self):
-        return type(self.output)
+        return self.output
 
     #sigmoid function
     def f(self,x):

@@ -23,10 +23,10 @@ if __name__ == "__main__":
 
     net = buildNetwork(len(t), .03*len(t), 1)
     ds = SupervisedDataSet(len(t), 1)
-    ds.addSample(loadImage('pic/face_2copy.png'),(2,))
+    ds.addSample(loadImage('pic/face_2copy.png'),(500,))
     ds.addSample(loadImage('pic/image_1copy.png'),(1,))
     ds.addSample(loadImage('pic/image_2copy.png'),(1,))
-    ds.addSample(loadImage('pic/face_5copy.png'),(2,))
+    ds.addSample(loadImage('pic/face_5copy.png'),(500,))
  
     trainer = BackpropTrainer(net, ds)
     error = 10
